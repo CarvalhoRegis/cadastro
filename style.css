@@ -1,0 +1,709 @@
+/* Menu informativo */
+/*#navbar-collapse ul {
+    padding: 0.1px;
+    margin: -5px;
+    background-color: black;
+    list-style:none;
+}
+#navbar-collapse ul li {
+    display: inline-block;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+#navbar-collapse ul li a {
+    padding: 5px 10px;
+    display: inline-block;
+    font-family: 'Arial';
+    font-size: 12px;
+
+    /* visual do link */
+    /*background-color:black;
+    color: rgba(238, 238, 238, 0.774);
+    text-decoration: none;
+    border-bottom:1px solid black;
+}
+#navbar-collapse ul li a:hover {
+    cursor: default;
+    color: rgb(255, 255, 255);
+    border-bottom:1px solid white;
+} */
+
+
+/* Menu Principal */
+#intro {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  background: #f5f8fd; /*url("../img/intro-bg.png") center top no-repeat;*/
+  background-size: cover;
+}
+
+#intro .intro-info h2 {
+  color: #73727c;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#intro .intro-info h2 span {
+  color: darkslategrey;
+}
+
+#intro .intro-info .btn-get-started,
+#intro .intro-info .btn-services {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: darkslategrey;
+  color: #fff;
+}
+
+#intro .intro-info .btn-get-started:hover,
+#intro .intro-info .btn-services:hover {
+  background: darkslategrey;
+}
+
+/* MENU */
+
+.main-nav {
+  
+  justify-content: center;
+
+}
+.main-nav,
+.main-nav * {
+  margin: 0;
+  padding: 18px;
+  margin-top: 14px;
+  list-style: none;
+}
+
+.main-nav > ul > li {
+  position: relative;
+  white-space: nowrap;
+  float: left;
+  left: 80px;
+}
+
+.main-nav a {
+  display: block;
+  position: relative;
+  color: #413e66;
+  padding: 30px 15px;
+  transition: 0.3s;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.main-nav a:hover,
+.main-nav .active > a,
+.main-nav li:hover > a {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.main-nav .drop-down ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: calc(100% - 30px);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: ease all 0.3s;
+}
+
+.main-nav .drop-down:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.main-nav .drop-down li {
+  min-width: 180px;
+  position: relative;
+}
+
+.main-nav .drop-down ul a {
+  padding: 10px 10px;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: none;
+  color: #065e77;
+}
+
+.main-nav .drop-down ul a:hover,
+.main-nav .drop-down ul .active > a,
+.main-nav .drop-down ul li:hover > a {
+  color: goldenrod;
+}
+
+.main-nav .drop-down > a:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  padding-left: 10px;
+}
+
+.main-nav .drop-down .drop-down ul {
+  top: 0;
+  left: calc(100% - 30px);
+}
+
+.main-nav .drop-down .drop-down:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+}
+
+.main-nav .drop-down .drop-down > a {
+  padding-right: 35px;
+}
+
+.main-nav .drop-down .drop-down > a:after {
+  content: "\f105";
+  position: absolute;
+  right: 15px;
+}
+
+/* Navegação Mobile  */
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow-y: auto;
+  left: -260px;
+  width: 260px;
+  padding-top: 18px;
+  background: rgba(40, 38, 70, 0.8);
+  transition: 0.4s;
+}
+
+.mobile-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav a {
+  display: block;
+  position: relative;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+.mobile-nav a:hover,
+.mobile-nav .active > a,
+.mobile-nav li:hover > a {
+  color: #8dc2fa;
+  text-decoration: none;
+}
+
+.mobile-nav .drop-down > a:after {
+  content: "\f078";
+  font-family: FontAwesome;
+  padding-left: 10px;
+  position: absolute;
+  right: 15px;
+}
+
+.mobile-nav .active.drop-down > a:after {
+  content: "\f077";
+}
+
+.mobile-nav .drop-down > a {
+  padding-right: 35px;
+}
+
+.mobile-nav .drop-down ul {
+  display: none;
+  overflow: hidden;
+}
+
+.mobile-nav .drop-down li {
+  padding-left: 20px;
+}
+
+.mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+}
+
+.mobile-nav-toggle i {
+  margin: 18px 18px 0 0;
+  color: #065e77;
+}
+
+.mobile-nav-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(40, 38, 70, 0.8);
+  overflow: hidden;
+  display: none;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+  left: 0;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+  color: #fff;
+}
+
+.section-header h3 {
+  font-size: 36px;
+  color: #413e66;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-header p {
+  text-align: center;
+  margin: auto;
+  font-size: 15px;
+  padding-bottom: 60px;
+  color: #535074;
+  width: 50%;
+}
+
+/* Section with background
+--------------------------------*/
+
+.section-bg {
+  background: #f5f8fd;
+}
+
+/* Fonte das Classes */
+body {
+    font-family: 'Franklin Gothic Medium';
+    font-size: medium;
+    font-size: 15px;
+}
+p {
+    font-family: 'Arial';
+    font-size: 14px;
+    text-align: center;
+}
+
+font{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+
+}
+
+/*Imagem Logo + Animação*/
+.zoom {
+    overflow: hidden;
+}
+
+.zoom img {
+	max-width: 5%;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	transition: all 0.3s;
+}
+
+.zoom:hover img {
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+
+/* Corpo + Slides de Imagem */
+
+
+
+/*corpo do site */
+
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px;
+  
+}
+h1,h2,h3 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 10px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+#p {
+    font-family: Cambria, Cochin, Georgia,;
+    font-size: 50px;
+    color:black;
+    position: absolute;
+    top: 10%;
+    left: 33%;
+}
+
+/* SERVIÇOS ITENS */
+#flex {
+  position: relative;
+  display: inline-block;
+  /*text-align: justify;
+    justify-content: center;
+    align-items: center;*/
+    width: 1040px;
+    height: 400px;
+  
+}
+
+#flex :hover {
+  cursor: default;
+  background-color: white;
+  color: black;
+
+  transition: 0.7s;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#flex1 {
+  position: relative;
+  background-color: darkslategrey;
+  color: white;
+  text-align: center;
+  width: 250px;
+  height: 320px;
+  margin: 5px;
+  float: left;
+  left:0px;
+}
+#flex7 {
+  position: relative;
+  background-color: darkslategrey;
+  color: white;
+  text-align: center;
+  width: 250px;
+  height: 320px;
+  margin: 5px;
+  float: right;
+  left:0px;
+}
+#flex8 {
+  position: relative;
+  background-color: darkslategrey;
+  color: white;
+  text-align: center;
+  width: 250px;
+  height: 320px;
+  margin: 5px;
+  float: left;
+  left:0px;
+}
+#flex9 {
+  position: relative;
+  background-color: darkslategrey;
+  color: white;
+  text-align: center;
+  width: 250px;
+  height: 320px;
+  margin: 5px;
+  float: right;
+  left:0px;
+}
+
+/*INCONE*/
+#flex2 {
+    position: absolute;
+    left: 30%;
+    top: 80%;
+    background-color: goldenrod;
+    color: white;
+    width: 90px;
+    height: 90px;
+    margin: 2px;
+
+    border: 1px solid #000;
+  }
+
+  #flex3 {
+    position: absolute;
+    left: 30%;
+    top: 80%;
+    background-color: goldenrod;
+    color: white;
+    width: 90px;
+    height: 90px;
+    margin: 2px;
+
+    border: 1px solid #000;
+  }
+
+  #flex4 {
+    position: absolute;
+    left: 30%;
+    top: 80%;
+    background-color: goldenrod;
+    color: white;
+    width: 90px;
+    height: 90px;
+    margin: 2px;
+
+    border: 1px solid #000;
+  }
+
+  #flex5 {
+    position: absolute;
+    left: 30%;
+    top: 80%;
+    background-color: goldenrod;
+    color: white;
+    width: 90px;
+    height: 90px;
+    margin: 2px;
+
+    border: 1px solid #000;
+  }
+
+flex-container {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #aaa;
+    
+}
+.flex-container {
+    width: 100%;
+    padding: 20px;
+    margin: 0px;
+}
+
+    /*background-color: rgb(27, 37, 37);
+    background-image: url('infra.png');
+    background-repeat: no-repeat; */
+
+#conteudo{
+    display: inline;
+
+    /*justify-content: center;
+    align-items: stretch; 
+    align-content: stretch; */    
+}
+/* SOBRE */
+#about {
+    padding: 80px 0;
+  }
+
+#about .about-img {
+    position: relative;
+    margin: 30px 30px 30px 30px;
+  }
+  
+  #about .about-img img {
+    width: 100%;
+    border: 8px solid #fff;
+    transition: .5s;
+  }
+  
+  #about .about-img img:hover {
+    width: 100%;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+  
+  #about .about-img::before {
+    position: absolute;
+    left: -31px;
+    top: -30px;
+    width: 90%;
+    height: 92%;
+    z-index: -1;
+    content: '';
+    background-color: #ebf1fa;
+    transition: .5s;
+  }
+  
+  #about .about-img::after {
+    position: absolute;
+    right: -31px;
+    bottom: -30px;
+    width: 90%;
+    height: 92%;
+    z-index: -1;
+    content: '';
+    background-color: #ebf1fa;
+    transition: .5s;
+  }
+
+  /*CONTATO*/
+  #sendmessage {
+      background-color: darkslategrey ;
+      color: white;
+  }
+  #lado{
+      text-align: right;
+  }
+
+  /* CREDITOS */
+  #footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+    color: #535074;
+    font-size: 15px;
+  }
+  
+  #footer .credits {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 4px;
+    color: #8582a8;
+  }
+  
+  #footer .credits a {
+    color: #1bb1dc;
+  }
+  
+  #footer .credits a:hover {
+    color: #0a98c0;
+  }
+
+  /* Planos */
+  #pricing {
+    padding: 80px 0;
+  }
+  
+  #pricing .card {
+    border: 0;
+    border-radius: 0px;
+    box-shadow: 0 3px 0px 0 rgba(65, 62, 102, 0.08);
+    transition: all .3s ease-in-out;
+    padding: 36px 0;
+    position: relative;
+  }
+  
+  #pricing .card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: darkslategrey;
+    transition: 0.5s;
+  }
+  
+  #pricing .card:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+  }
+  
+  #pricing .card:hover:after {
+    width: 100%;
+  }
+  
+  #pricing .card .card-header {
+    background-color: white;
+    border-bottom: 0px;
+    -moz-text-align-last: center;
+    text-align-last: center;
+  }
+  
+  #pricing .card .card-title {
+    margin-bottom: 16px;
+    color: #535074;
+  }
+  
+  #pricing .card .card-block {
+    padding-top: 0;
+    text-align: center;
+  }
+  
+  #pricing .card .list-group-item {
+    border: 0px;
+    padding: 6px;
+    color: black;
+    font-weight: 300;
+  }
+  
+  #pricing .card h3 {
+    font-size: 64px;
+    margin-bottom: 0px;
+    color: darkslategrey;
+  }
+  
+  #pricing .card h3 .currency {
+    font-size: 30px;
+    position: relative;
+    font-weight: 400;
+    top: -30px;
+    letter-spacing: 0px;
+  }
+  
+  #pricing .card h3 .period {
+    font-size: 16px;
+    color: #6c67a3;
+    letter-spacing: 0px;
+  }
+  
+  #pricing .card .list-group {
+    margin-bottom: 15px;
+  }
+  
+  #pricing .card .btn {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    color: #5f5b96;
+    border-radius: 0;
+    padding: 10px 24px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    display: inline-block;
+    background: darkslategrey;
+    color: #fff;
+  }
+  
+  #pricing .card .btn:hover {
+    background: darkslategrey;
+  }
+
+  #maps {
+    position: absolute;
+    top: 428%;
+    left: 15%;
+  }
+
